@@ -1,0 +1,7 @@
+1. Stateless and stateful widgets
+
+if a widgets changes by user interacts its called stateful widget. and vice verse Stateless
+
+stateful is dynamic.  
+stl -> Stateless
+stfu -> stateful

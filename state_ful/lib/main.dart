@@ -9,10 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
-      home: HomePage(),
-    );
+    return MaterialApp(
+        title: 'Flutter Demo',
+        home: const HomePage(),
+        theme: ThemeData(
+            primaryColor: Colors.green,
+            primarySwatch: Colors.green,
+            brightness: Brightness.light));
   }
 }
 
@@ -40,9 +43,22 @@ class _HomePageState extends State<HomePage> {
       padding: const EdgeInsets.all(8.0),
       child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(myText),
-            ElevatedButton(onPressed: _changeText, child: const Text('Button'))
+            Text(
+              myText,
+              style: TextStyle(
+                background: Paint()..color = Colors.yellow,
+                color: Colors.pinkAccent,
+                fontSize: 32.0,
+              ),
+            ),
+            OutlinedButton(
+                onPressed: _changeText,
+                child: const Text(
+                  'Button',
+                  style: TextStyle(fontSize: 20.0, color: Colors.deepOrange),
+                ))
           ],
         ),
       ),
